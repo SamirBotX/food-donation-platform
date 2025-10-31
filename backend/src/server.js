@@ -5,6 +5,10 @@ import dotenv from "dotenv";
 import pool from "./config/db.js";  // ✅ Database connection
 import userRoutes from "../routes/userRoutes.js"; // ✅ User routes
 import donationRoutes from "../routes/donationRoutes.js"; // ✅ Donation routes
+import claimRoutes from "../routes/claimRoutes.js"; // ✅ Claim routes
+import adminRoutes from "../routes/adminRoutes.js"; // ✅ Admin routes
+
+
 
 // Load environment variables from .env file
 dotenv.config();
@@ -38,6 +42,8 @@ app.get("/api/testdb", async (req, res) => {
 // 3️⃣ API Routes
 app.use("/api/users", userRoutes); // ✅ User routes
 app.use("/api/donations", donationRoutes); // ✅ Donation routes
+app.use("/api/claims", claimRoutes); // ✅ Claim routes
+app.use("/api/admin", adminRoutes); // ✅ Admin routes
 
 
 // 4️⃣ Start the Server

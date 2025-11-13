@@ -36,15 +36,27 @@ app.use(
 const allowedOrigins = [
   process.env.FRONTEND_URL || "http://localhost:5177",
   "http://127.0.0.1:5177",
+
   "http://localhost:5174",
   "http://127.0.0.1:5174",
+
   "http://localhost:5175",
   "http://127.0.0.1:5175",
+
+  "http://localhost:5176",
+  "http://127.0.0.1:5176",
+
   "http://localhost:5178",
   "http://127.0.0.1:5178",
+
   "http://localhost:3000",
+
+  // ⭐ ADD YOUR VERCEL FRONTEND HERE
+  "https://food-donation-platform-frontend.vercel.app",
+
   ...(process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",") : []),
 ];
+
 
 
 app.use(
